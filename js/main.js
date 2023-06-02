@@ -304,6 +304,7 @@ async function currentDate() {
     $currentDate.textContent = currentDate.split('T')[0].split('-').reverse().join('.');
 };
 
+// Отрисовка строки таблицы курсов
 async function coursesTableRender() {
     const $table = document.querySelector('.courses__table');    
     const currentCourses = await getData();
@@ -316,7 +317,7 @@ async function coursesTableRender() {
     });       
 };
 
-// Отрисовка строки таблицы курсов
+// Создание строки таблицы курсов
 function coursesRowRender(state = {}) {
     const $tableRow = document.createElement('ul');
     const $tableItemRowCode = document.createElement('li'),
